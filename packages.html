@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Packages - ProfitPluz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+    body{background:#0f172a;color:#fff}
+
+    header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:#020617;position:sticky;top:0}
+    nav a{color:#fff;margin-left:20px;text-decoration:none}
+
+    section{padding:100px 20px;max-width:1100px;margin:auto}
+
+    h1{text-align:center;font-size:42px;margin-bottom:10px}
+    p.center{text-align:center;opacity:.8;margin-bottom:50px}
+
+    .pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
+
+    .card{background:#020617;padding:30px;border-radius:18px;text-align:center;position:relative;opacity:0;transform:translateY(50px);transition:.7s;border:1px solid rgba(255,255,255,0.05)}
+    .card.show{opacity:1;transform:translateY(0)}
+
+    .price{font-size:38px;margin:15px 0;color:#38bdf8}
+    .features{margin:20px 0;text-align:left;line-height:2}
+
+    .btn{display:inline-block;margin-top:15px;background:#38bdf8;color:#000;padding:12px 24px;border-radius:30px;text-decoration:none;font-weight:600;transition:.3s}
+    .btn:hover{transform:scale(1.05)}
+
+    .popular{border:2px solid #38bdf8;transform:scale(1.05)}
+
+    .badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#38bdf8;color:#000;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600}
+
+    /* CUSTOM FORM SIDE BOX */
+    .custom-box{
+      position:fixed;
+      right:20px;
+      bottom:20px;
+      width:300px;
+      background:#020617;
+      border:1px solid rgba(255,255,255,0.1);
+      border-radius:18px;
+      padding:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.4);
+      animation:fadeInUp .6s ease;
+    }
+
+    .custom-box h3{margin-bottom:10px;color:#38bdf8}
+    .custom-box p{font-size:14px;opacity:.8;margin-bottom:10px}
+
+    .custom-box input,
+    .custom-box textarea{
+      width:100%;
+      margin-top:8px;
+      padding:10px;
+      border-radius:10px;
+      border:none;
+      background:#0f172a;
+      color:#fff;
+      font-size:14px;
+    }
+
+    .custom-box button{
+      width:100%;
+      margin-top:12px;
+      padding:12px;
+      border:none;
+      border-radius:25px;
+      background:#38bdf8;
+      color:#000;
+      font-weight:600;
+      cursor:pointer;
+      transition:.3s;
+    }
+
+    .custom-box button:hover{transform:scale(1.05)}
+
+    @keyframes fadeInUp{
+      from{opacity:0;transform:translateY(40px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+
+    footer{background:#020617;padding:50px 20px;margin-top:60px}
+    .footer-bottom{text-align:center;margin-top:20px;opacity:.7}
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h2>ProfitPluz</h2>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="results.html">Results</a>
+    <a href="packages.html">Packages</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section>
+  <h1>Choose Your Growth Plan</h1>
+  <p class="center">Flexible marketing packages designed to generate real leads and sales.</p>
+
+  <div class="pricing">
+
+    <div class="card">
+      <h2>Starter</h2>
+      <div class="price">₹6,000</div>
+      <div class="features">
+        ✔ Basic Ads Setup<br>
+        ✔ 10 Creative Posters<br>
+        ✔ Monthly Support<br>
+        ✔ Lead Guidance
+      </div>
+      <a class="btn" href="https://wa.me/917777964733" target="_blank">Get Started</a>
+    </div>
+
+    <div class="card popular">
+      <div class="badge">Most Popular</div>
+      <h2>Growth</h2>
+      <div class="price">₹12,000</div>
+      <div class="features">
+        ✔ Everything in Starter<br>
+        ✔ Meta Ads Management<br>
+        ✔ 20 Creatives + Reels<br>
+        ✔ Lead Tracking System
+      </div>
+      <a class="btn" href="https://wa.me/917777964733" target="_blank">Start Growth</a>
+    </div>
+
+    <div class="card">
+      <h2>Pro</h2>
+      <div class="price">₹20,000</div>
+      <div class="features">
+        ✔ Full Marketing Management<br>
+        ✔ Unlimited Creatives<br>
+        ✔ Daily Lead Monitoring<br>
+        ✔ Dedicated Strategy Support
+      </div>
+      <a class="btn" href="https://wa.me/917777964733" target="_blank">Go Pro</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- BUDGET SUGGESTIONS SECTION -->
+<section>
+  <h1>Monthly Budget Suggestions by Business Type</h1>
+  <p class="center">Recommended ad spend ranges based on typical growth goals and competition levels.</p>
+
+  <h2 style="margin-top:40px">Small Businesses</h2>
+  <div class="pricing" style="margin-top:20px">
+    <div class="card show"><strong>Salons & Parlours</strong><br><span class="price">₹5k – ₹10k</span></div>
+    <div class="card show"><strong>Clinics</strong><br><span class="price">₹8k – ₹15k</span></div>
+    <div class="card show"><strong>Gyms</strong><br><span class="price">₹10k – ₹18k</span></div>
+    <div class="card show"><strong>Boutiques</strong><br><span class="price">₹6k – ₹12k</span></div>
+    <div class="card show"><strong>Restaurants</strong><br><span class="price">₹8k – ₹20k</span></div>
+  </div>
+
+  <h2 style="margin-top:60px">Big Businesses / Enterprises</h2>
+  <div class="pricing" style="margin-top:20px">
+    <div class="card show"><strong>Real Estate Projects</strong><br><span class="price">₹25k – ₹1L+</span></div>
+    <div class="card show"><strong>Hospitals</strong><br><span class="price">₹30k – ₹80k</span></div>
+    <div class="card show"><strong>Education Institutes</strong><br><span class="price">₹20k – ₹60k</span></div>
+    <div class="card show"><strong>E‑commerce Brands</strong><br><span class="price">₹40k – ₹2L+</span></div>
+    <div class="card show"><strong>Franchise Chains</strong><br><span class="price">₹50k – ₹3L+</span></div>
+  </div>
+</section>
+
+<!-- CUSTOM PACKAGE FORM FLOATING -->
+<div class="custom-box">
+  <h3>Need Custom Package?</h3>
+  <p>Send your budget & requirements. We’ll create the best plan for your business.</p>
+
+  <form onsubmit="sendWhatsApp(event)">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="text" id="business" placeholder="Business Type" required>
+    <input type="number" id="budget" placeholder="Monthly Budget ₹" required>
+    <textarea id="msg" rows="3" placeholder="Your Requirements"></textarea>
+    <button type="submit">Send on WhatsApp</button>
+  </form>
+</div>
+
+<footer>
+  <div class="footer-bottom">© 2026 ProfitPluz. All rights reserved.</div>
+</footer>
+
+<script>
+  const cards=document.querySelectorAll('.card');
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')});
+  });
+  cards.forEach(c=>observer.observe(c));
+
+  function sendWhatsApp(e){
+    e.preventDefault();
+    const name=document.getElementById('name').value;
+    const business=document.getElementById('business').value;
+    const budget=document.getElementById('budget').value;
+    const msg=document.getElementById('msg').value;
+
+    const text=`Hello ProfitPluz,%0AName: ${name}%0ABusiness: ${business}%0ABudget: ₹${budget}%0ARequirements: ${msg}`;
+    window.open(`https://wa.me/917777964733?text=${text}`,'_blank');
+  }
+</script>
+
+</body>
+</html>

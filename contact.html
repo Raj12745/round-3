@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - ProfitPluz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+    body{background:#0f172a;color:#fff}
+
+    header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:#020617;position:sticky;top:0}
+    nav a{color:#fff;margin-left:20px;text-decoration:none}
+
+    section{padding:100px 20px;max-width:1100px;margin:auto}
+
+    h1{text-align:center;font-size:42px;margin-bottom:10px}
+    p.center{text-align:center;opacity:.8;margin-bottom:50px}
+
+    /* CONTACT GRID */
+    .contact-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:40px;
+      align-items:start;
+    }
+
+    /* CONTACT INFO */
+    .info-box{
+      background:#020617;
+      padding:30px;
+      border-radius:18px;
+      line-height:2;
+      border:1px solid rgba(255,255,255,0.05);
+      opacity:0;
+      transform:translateY(40px);
+      transition:.7s;
+    }
+
+    .info-box.show{opacity:1;transform:translateY(0)}
+
+    /* FORM */
+    form{
+      background:#020617;
+      padding:30px;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,0.05);
+      opacity:0;
+      transform:translateY(40px);
+      transition:.7s;
+    }
+
+    form.show{opacity:1;transform:translateY(0)}
+
+    input, textarea{
+      width:100%;
+      margin-top:12px;
+      padding:12px;
+      border-radius:10px;
+      border:none;
+      background:#0f172a;
+      color:#fff;
+      font-size:14px;
+    }
+
+    button{
+      width:100%;
+      margin-top:15px;
+      padding:14px;
+      border:none;
+      border-radius:30px;
+      background:#38bdf8;
+      color:#000;
+      font-weight:600;
+      cursor:pointer;
+      transition:.3s;
+    }
+
+    button:hover{transform:scale(1.05)}
+
+    /* MAP STYLE BOX */
+    .map{
+      margin-top:40px;
+      background:linear-gradient(135deg,#020617,#0f172a);
+      padding:40px;
+      border-radius:18px;
+      text-align:center;
+      opacity:.9;
+    }
+
+    footer{background:#020617;padding:50px 20px;margin-top:60px}
+    .footer-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px}
+    .footer-bottom{text-align:center;margin-top:25px;opacity:.7}
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h2>ProfitPluz</h2>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="results.html">Results</a>
+    <a href="packages.html">Packages</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section>
+  <h1>Contact Us</h1>
+  <p class="center">Tell us about your business — we’ll help you generate real leads and growth.</p>
+
+  <div class="contact-grid">
+
+    <!-- CONTACT INFO -->
+    <div class="info-box">
+      <h3>Get in Touch</h3>
+      <p>📞 +91 77779 64733</p>
+      <p>📧 profitpluzdigital@gmail.com</p>
+      <p>📍 Vadodara, Gujarat</p>
+      <br>
+      <p><strong>Working Hours:</strong><br>Mon – Sat : 10 AM – 7 PM</p>
+    </div>
+
+    <!-- CONTACT FORM -->
+    <form onsubmit="sendWhatsApp(event)">
+      <h3>Send Inquiry</h3>
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="text" id="phone" placeholder="Phone Number" required>
+      <input type="text" id="business" placeholder="Business Type" required>
+      <textarea id="msg" rows="4" placeholder="Tell us your requirement"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+  </div>
+
+  <!-- MAP STYLE -->
+  <div class="map">
+    <h3>Our Location</h3>
+    <p>Vrundavan Char Rasta, near SBI Bank, Waghodia Road, Vadodara, Gujarat</p>
+  </div>
+</section>
+
+<!-- SUPPORT DETAILS SECTION -->
+<section>
+  <h1>Our Support & Service Commitment</h1>
+  <p class="center">We believe in long‑term partnership, fast response, and real business growth support.</p>
+
+  <div class="contact-grid">
+
+    <div class="info-box">
+      <h3>24/7 WhatsApp Assistance</h3>
+      <p>Quick replies, campaign updates, and instant problem solving whenever you need help.</p>
+    </div>
+
+    <div class="info-box">
+      <h3>Dedicated Strategy Guidance</h3>
+      <p>We don’t just run ads — we guide your full growth strategy step‑by‑step.</p>
+    </div>
+
+    <div class="info-box">
+      <h3>Transparent Reporting</h3>
+      <p>Clear performance data, real lead tracking, and honest monthly insights.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SPECIALITY SECTION -->
+<section>
+  <h1>Why Businesses Choose ProfitPluz</h1>
+  <p class="center">Our unique strengths that make us different from typical marketing agencies.</p>
+
+  <div class="contact-grid">
+
+    <div class="info-box">
+      <h3>Performance‑Focused Marketing</h3>
+      <p>Every campaign is optimized for leads, sales, and measurable ROI — not just views.</p>
+    </div>
+
+    <div class="info-box">
+      <h3>Creative AI‑Powered Content</h3>
+      <p>Modern creatives, reels, and visuals designed to attract real customers.</p>
+    </div>
+
+    <div class="info-box">
+      <h3>Local Business Growth Experts</h3>
+      <p>Strong experience working with salons, real estate, clinics, gyms, and many more.</p>
+    </div>
+
+    <div class="info-box">
+      <h3>Budget‑Friendly Smart Plans</h3>
+      <p>Flexible pricing designed for both small businesses and large enterprises.</p>
+    </div>
+
+    <div class="info-box">
+      <h3>Fast Response Support Team</h3>
+      <p>Our team ensures quick communication and continuous campaign improvement.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h3>ProfitPluz</h3>
+      <p>Performance‑driven digital marketing agency focused on real business growth.</p>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+      <p>Home</p>
+      <p>About</p>
+      <p>Results</p>
+      <p>Packages</p>
+    </div>
+
+    <div>
+      <h3>Contact</h3>
+      <p>+91 77779 64733</p>
+      <p>profitpluzdigital@gmail.com</p>
+      <p>Vadodara, Gujarat</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">© 2026 ProfitPluz. All rights reserved.</div>
+</footer>
+
+<script>
+  const elements=document.querySelectorAll('.info-box, form');
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')});
+  });
+  elements.forEach(el=>observer.observe(el));
+
+  function sendWhatsApp(e){
+    e.preventDefault();
+
+    const btn=e.target.querySelector('button');
+    btn.innerText='Sending...';
+    btn.style.opacity='0.7';
+
+    const name=document.getElementById('name').value;
+    const phone=document.getElementById('phone').value;
+    const business=document.getElementById('business').value;
+    const msg=document.getElementById('msg').value;
+
+    const text=`Hello ProfitPluz,%0AName: ${name}%0APhone: ${phone}%0ABusiness: ${business}%0ARequirement: ${msg}`;
+
+    setTimeout(()=>{
+      window.open(`https://wa.me/917777964733?text=${text}`,'_blank');
+      btn.innerText='Sent ✓';
+      btn.style.opacity='1';
+    },900);
+  }
+</script>
+
+</body>
+</html>

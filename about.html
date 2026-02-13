@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - ProfitPluz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+    body{background:#0f172a;color:#fff}
+
+    header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:#020617;position:sticky;top:0}
+    nav a{color:#fff;margin-left:20px;text-decoration:none}
+
+    section{padding:100px 20px;max-width:1100px;margin:auto}
+
+    h1{text-align:center;font-size:42px;margin-bottom:20px}
+    p.center{text-align:center;opacity:.85;margin-bottom:50px}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
+
+    .card{
+      background:#020617;
+      padding:28px;
+      border-radius:18px;
+      line-height:1.7;
+      border:1px solid rgba(255,255,255,0.05);
+      opacity:0;
+      transform:translateY(40px);
+      transition:.7s;
+    }
+
+    .card.show{opacity:1;transform:translateY(0)}
+
+    .highlight{
+      color:#38bdf8;
+      font-weight:600;
+    }
+
+    /* TIMELINE */
+    .timeline{
+      margin-top:60px;
+      border-left:2px solid #38bdf8;
+      padding-left:25px;
+    }
+
+    .timeline-item{
+      margin-bottom:35px;
+      opacity:0;
+      transform:translateY(30px);
+      transition:.7s;
+    }
+
+    .timeline-item.show{opacity:1;transform:translateY(0)}
+
+    .year{color:#38bdf8;font-weight:600;margin-bottom:5px}
+
+    /* TEAM */
+    .team{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:25px;margin-top:40px}
+
+    .member{
+      text-align:center;
+      background:#020617;
+      padding:25px;
+      border-radius:18px;
+      transition:.4s;
+      opacity:0;
+      transform:translateY(40px);
+    }
+
+    .member.show{opacity:1;transform:translateY(0)}
+
+    .member img{width:80px;height:80px;border-radius:50%;margin-bottom:12px}
+
+    footer{background:#020617;padding:50px 20px;margin-top:60px}
+    .footer-bottom{text-align:center;margin-top:20px;opacity:.7}
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h2>ProfitPluz</h2>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="results.html">Results</a>
+    <a href="packages.html">Packages</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+
+<!-- INTRO -->
+<section>
+  <h1>About ProfitPluz</h1>
+  <p class="center">
+    We are a <span class="highlight">performance‑driven digital marketing agency</span> helping local businesses
+    generate real leads, real customers, and real growth using smart advertising and creative strategy.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Our Mission</h3>
+      <p>
+        To help small and growing businesses achieve consistent online growth through
+        data‑driven marketing, creative content, and transparent performance tracking.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Our Vision</h3>
+      <p>
+        To become one of the most trusted digital growth partners for local businesses
+        across India by delivering measurable results and long‑term value.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Our Approach</h3>
+      <p>
+        We combine <span class="highlight">strategy, creativity, and performance marketing</span>
+        to ensure every campaign focuses on leads, sales, and ROI — not just impressions.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- JOURNEY / TIMELINE -->
+<section>
+  <h1>Our Journey</h1>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="year">2024</div>
+      <p>Started ProfitPluz with a mission to help local businesses grow through digital marketing.</p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="year">2025</div>
+      <p>Worked with multiple salons, real estate brands, and service businesses generating real leads.</p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="year">2026</div>
+      <p>Expanding into full performance marketing solutions with AI creatives and scalable growth systems.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- TEAM -->
+<section>
+  <h1>Our Team</h1>
+  <p class="center">A passionate team focused on business growth, creativity, and performance.</p>
+
+  <div class="team">
+
+    <div class="member">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg">
+      <h4>Raj Kushwaha</h4>
+      <p>Founder & Growth Strategist</p>
+    </div>
+
+    <div class="member">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg">
+      <h4>Creative Specialist</h4>
+      <p>Design & Content Strategy</p>
+    </div>
+
+    <div class="member">
+      <img src="https://randomuser.me/api/portraits/men/65.jpg">
+      <h4>Ads Manager</h4>
+      <p>Performance Marketing Expert</p>
+    </div>
+
+  </div>
+</section>
+
+
+<footer>
+  <div class="footer-bottom">© 2026 ProfitPluz. All rights reserved.</div>
+</footer>
+
+
+<script>
+  const items=document.querySelectorAll('.card, .timeline-item, .member');
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')});
+  });
+  items.forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
